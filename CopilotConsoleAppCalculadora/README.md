@@ -34,7 +34,7 @@ Estrutura da Resposta Esperada: 
 
 ---
 
-## Retorno do Prompt no Gemini
+## Retorno do Prompt no Copilot
 
 ---
 
