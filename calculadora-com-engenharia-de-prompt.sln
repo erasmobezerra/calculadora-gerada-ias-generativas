@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.14.36327.8
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeminiConsoleAppCalculadora", "gemini\GeminiConsoleAppCalculadora.csproj", "{226BB633-3012-41DF-AF61-C82090314CD8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeminiConsoleAppCalculadora", "GeminiConsoleAppCalculadora\GeminiConsoleAppCalculadora.csproj", "{226BB633-3012-41DF-AF61-C82090314CD8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CopilotConsoleAppCalculadora", "CopilotConsoleAppCalculadora\CopilotConsoleAppCalculadora.csproj", "{FEA5F66B-E79A-4E0A-A1FF-480126BFD666}"
 EndProject

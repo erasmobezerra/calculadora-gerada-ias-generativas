@@ -1,15 +1,54 @@
+ï»¿## ğŸ’¡ Prompt utilizado
+
+```
+[PERSONA]Â 
+Atue como um desenvolvedor .NET sÃªnior especializado em aplicaÃ§Ãµes de console e design de classes.
+
+[OBJETIVO CLARO / FINALIDADE]Â 
+Crie um cÃ³digo-fonte completo em C# para uma aplicaÃ§Ã£o de Console (.NET 8) que funcione como uma calculadora de operaÃ§Ãµes bÃ¡sicas. A calculadora deve permitir ao usuÃ¡rio realizar as seguintes operaÃ§Ãµes: Somar, Subtrair, Multiplicar, Dividir.
+
+[DETALHES DA TAREFA A SER EXECUTADA]
+**InteraÃ§Ã£o com o UsuÃ¡rio:
+A aplicaÃ§Ã£o deve interagir com o usuÃ¡rio via console, solicitando os nÃºmeros e a operaÃ§Ã£o desejada. ApÃ³s cada cÃ¡lculo, o resultado deve ser exibido, e o usuÃ¡rio deve ter a opÃ§Ã£o de realizar outra operaÃ§Ã£o ou sair do programa.
+
+**Estrutura do CÃ³digo:Â 
+=>Classe EstÃ¡tica Calculadora:
+-Deve estar localizada em uma pasta Models dentro do projeto.
+-SerÃ¡ uma classe static.
+-ConterÃ¡ os mÃ©todos estaticos para cada operaÃ§Ã£o (Somar, Subtrair, Multiplicar, Dividir).
+-Pode conter propriedades protegidas ou privadas para armazenar os operandos.
+
+=> Arquivo Program.cs (Programa Principal):
+-Deve conter a lÃ³gica de interaÃ§Ã£o com o usuÃ¡rio (leitura de entrada, exibiÃ§Ã£o de resultados, loop de operaÃ§Ãµes).
+-Chamar os mÃ©todos de operaÃ§Ã£o para os cÃ¡lculos.
+-Inclua tratamento de erros para entradas invÃ¡lidas (nÃ£o numÃ©ricas) e para divisÃ£o por zero.
+-NÃ£o Ã© necessÃ¡rio a inclusÃ£o de comentÃ¡rio no cÃ³digo.
+
+[FORMATO DE SAIDA ESPERADO]Â 
+Estrutura da Resposta Esperada:Â 
+-ForneÃ§a o cÃ³digo C# completo em blocos de cÃ³digo separados para o Program.cs e a classe Models > Calculadora.cs, pronto para ser copiado para um projeto de console .NET.Â 
+-ForneÃ§a os passos para quem desejar executar o projeto em seu computador.
+-Conclua explicando o funcionamento do cÃ³digo no Pogram.csÂ  Calculadora.cs de uma forma didÃ¡tica para entendimento de quem estÃ¡ inciando os estudos
+```
+
+---
+
+## Retorno do Prompt no Gemini
+
+---
+
 # Calculadora Console em .NET 8
 
 ## Estrutura do Projeto
 
 ```
 CalculadoraConsole/
-ÃÄÄ Models/
-³   ÀÄÄ Calculadora.cs
-ÀÄÄ Program.cs
+ÃƒÃ„Ã„ Models/
+Â³   Ã€Ã„Ã„ Calculadora.cs
+Ã€Ã„Ã„ Program.cs
 ```
 
-## C¢digo Fonte
+## CÂ¢digo Fonte
 
 ### 1. Calculadora.cs
 
@@ -37,7 +76,7 @@ public static class Calculadora
     {
         if (num2 == 0)
         {
-            throw new DivideByZeroException("N„o ‚ poss¡vel dividir por zero!");
+            throw new DivideByZeroException("Nâ€o â€š possÂ¡vel dividir por zero!");
         }
         return num1 / num2;
     }
@@ -54,23 +93,23 @@ bool continuar = true;
 while (continuar)
 {
     Console.Clear();
-    Console.WriteLine("Calculadora Console - Opera‡”es B sicas");
+    Console.WriteLine("Calculadora Console - Operaâ€¡â€es BÂ sicas");
     Console.WriteLine("--------------------------------------");
     
     try
     {
-        Console.Write("Digite o primeiro n£mero: ");
+        Console.Write("Digite o primeiro nÂ£mero: ");
         double num1 = double.Parse(Console.ReadLine()!);
 
-        Console.Write("Digite o segundo n£mero: ");
+        Console.Write("Digite o segundo nÂ£mero: ");
         double num2 = double.Parse(Console.ReadLine()!);
 
-        Console.WriteLine("\nOpera‡”es dispon¡veis:");
+        Console.WriteLine("\nOperaâ€¡â€es disponÂ¡veis:");
         Console.WriteLine("1 - Somar");
         Console.WriteLine("2 - Subtrair");
         Console.WriteLine("3 - Multiplicar");
         Console.WriteLine("4 - Dividir");
-        Console.Write("\nEscolha uma opera‡„o (1-4): ");
+        Console.Write("\nEscolha uma operaâ€¡â€o (1-4): ");
         
         int operacao = int.Parse(Console.ReadLine()!);
         double resultado = 0;
@@ -95,7 +134,7 @@ while (continuar)
                 simboloOperacao = "/";
                 break;
             default:
-                Console.WriteLine("Opera‡„o inv lida!");
+                Console.WriteLine("Operaâ€¡â€o invÂ lida!");
                 continue;
         }
 
@@ -103,7 +142,7 @@ while (continuar)
     }
     catch (FormatException)
     {
-        Console.WriteLine("\nErro: Entrada inv lida. Digite apenas n£meros!");
+        Console.WriteLine("\nErro: Entrada invÂ lida. Digite apenas nÂ£meros!");
     }
     catch (DivideByZeroException ex)
     {
@@ -114,14 +153,14 @@ while (continuar)
         Console.WriteLine($"\nOcorreu um erro inesperado: {ex.Message}");
     }
 
-    Console.Write("\nDeseja realizar outra opera‡„o? (S/N): ");
+    Console.Write("\nDeseja realizar outra operaâ€¡â€o? (S/N): ");
     continuar = Console.ReadLine()!.Trim().ToUpper() == "S";
 }
 
 Console.WriteLine("\nObrigado por usar a calculadora!");
 ```
 
-## Passos para Execu‡„o
+## Passos para Execuâ€¡â€o
 
 1. Crie um novo projeto Console em .NET 8:
    ```bash
@@ -129,44 +168,44 @@ Console.WriteLine("\nObrigado por usar a calculadora!");
    cd CalculadoraConsole
    ```
 
-2. Crie a pasta `Models` e adicione o arquivo `Calculadora.cs` com o c¢digo fornecido
+2. Crie a pasta `Models` e adicione o arquivo `Calculadora.cs` com o cÂ¢digo fornecido
 
-3. Substitua o conte£do do `Program.cs` pelo c¢digo fornecido
+3. Substitua o conteÂ£do do `Program.cs` pelo cÂ¢digo fornecido
 
 4. Execute o projeto:
    ```bash
    dotnet run
    ```
 
-## Explica‡„o Did tica
+## Explicaâ€¡â€o DidÂ tica
 
 ### Calculadora.cs
 
-Esta ‚ uma classe est tica que cont‚m os m‚todos para as opera‡”es matem ticas b sicas:
+Esta â€š uma classe estÂ tica que contâ€šm os mâ€štodos para as operaâ€¡â€es matemÂ ticas bÂ sicas:
 
-1. **M‚todos Est ticos**: Cada opera‡„o (Somar, Subtrair, Multiplicar, Dividir) ‚ implementada como um m‚todo est tico, o que significa que podem ser chamados sem precisar criar uma instƒncia da classe.
+1. **Mâ€štodos EstÂ ticos**: Cada operaâ€¡â€o (Somar, Subtrair, Multiplicar, Dividir) â€š implementada como um mâ€štodo estÂ tico, o que significa que podem ser chamados sem precisar criar uma instÆ’ncia da classe.
 
-2. **Tratamento de Erros**: O m‚todo `Dividir` inclui uma verifica‡„o para divis„o por zero, lan‡ando uma exce‡„o espec¡fica nesse caso.
+2. **Tratamento de Erros**: O mâ€štodo `Dividir` inclui uma verificaâ€¡â€o para divisâ€o por zero, lanâ€¡ando uma exceâ€¡â€o especÂ¡fica nesse caso.
 
-3. **Simplicidade**: Cada m‚todo faz apenas uma coisa espec¡fica, seguindo o princ¡pio de responsabilidade £nica.
+3. **Simplicidade**: Cada mâ€štodo faz apenas uma coisa especÂ¡fica, seguindo o princÂ¡pio de responsabilidade Â£nica.
 
 ### Program.cs
 
-Este ‚ o ponto de entrada da aplica‡„o e cont‚m a l¢gica de intera‡„o com o usu rio:
+Este â€š o ponto de entrada da aplicaâ€¡â€o e contâ€šm a lÂ¢gica de interaâ€¡â€o com o usuÂ rio:
 
-1. **Loop Principal**: O programa roda em um loop `while` que continua at‚ o usu rio decidir sair.
+1. **Loop Principal**: O programa roda em um loop `while` que continua atâ€š o usuÂ rio decidir sair.
 
-2. **Entrada de Dados**: Solicita dois n£meros e a opera‡„o desejada ao usu rio.
+2. **Entrada de Dados**: Solicita dois nÂ£meros e a operaâ€¡â€o desejada ao usuÂ rio.
 
-3. **Tratamento de Exce‡”es**:
-   - `FormatException`: Captura entradas n„o num‚ricas
-   - `DivideByZeroException`: Trata tentativas de divis„o por zero
+3. **Tratamento de Exceâ€¡â€es**:
+   - `FormatException`: Captura entradas nâ€o numâ€šricas
+   - `DivideByZeroException`: Trata tentativas de divisâ€o por zero
    - `Exception`: Captura quaisquer outros erros inesperados
 
-4. **Estrutura de Controle**: Usa um `switch` para determinar qual opera‡„o matem tica executar com base na escolha do usu rio.
+4. **Estrutura de Controle**: Usa um `switch` para determinar qual operaâ€¡â€o matemÂ tica executar com base na escolha do usuÂ rio.
 
-5. **Feedback Visual**: Mostra a opera‡„o realizada e seu resultado no formato "num1 operador num2 = resultado".
+5. **Feedback Visual**: Mostra a operaâ€¡â€o realizada e seu resultado no formato "num1 operador num2 = resultado".
 
-6. **Continuidade**: Pergunta ao usu rio se deseja realizar outra opera‡„o antes de continuar ou sair.
+6. **Continuidade**: Pergunta ao usuÂ rio se deseja realizar outra operaâ€¡â€o antes de continuar ou sair.
 
-Esta estrutura separa claramente a l¢gica de c lculo (na classe Calculadora) da intera‡„o com o usu rio (no Program.cs), seguindo boas pr ticas de desenvolvimento.
+Esta estrutura separa claramente a lÂ¢gica de cÂ lculo (na classe Calculadora) da interaâ€¡â€o com o usuÂ rio (no Program.cs), seguindo boas prÂ ticas de desenvolvimento.

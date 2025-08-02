@@ -1,3 +1,43 @@
+Ôªø
+## üí° Prompt utilizado
+
+```
+[PERSONA]¬†
+Atue como um desenvolvedor .NET s√™nior especializado em aplica√ß√µes de console e design de classes.
+
+[OBJETIVO CLARO / FINALIDADE]¬†
+Crie um c√≥digo-fonte completo em C# para uma aplica√ß√£o de Console (.NET 8) que funcione como uma calculadora de opera√ß√µes b√°sicas. A calculadora deve permitir ao usu√°rio realizar as seguintes opera√ß√µes: Somar, Subtrair, Multiplicar, Dividir.
+
+[DETALHES DA TAREFA A SER EXECUTADA]
+**Intera√ß√£o com o Usu√°rio:
+A aplica√ß√£o deve interagir com o usu√°rio via console, solicitando os n√∫meros e a opera√ß√£o desejada. Ap√≥s cada c√°lculo, o resultado deve ser exibido, e o usu√°rio deve ter a op√ß√£o de realizar outra opera√ß√£o ou sair do programa.
+
+**Estrutura do C√≥digo:¬†
+=>Classe Est√°tica Calculadora:
+-Deve estar localizada em uma pasta Models dentro do projeto.
+-Ser√° uma classe static.
+-Conter√° os m√©todos estaticos para cada opera√ß√£o (Somar, Subtrair, Multiplicar, Dividir).
+-Pode conter propriedades protegidas ou privadas para armazenar os operandos.
+
+=> Arquivo Program.cs (Programa Principal):
+-Deve conter a l√≥gica de intera√ß√£o com o usu√°rio (leitura de entrada, exibi√ß√£o de resultados, loop de opera√ß√µes).
+-Chamar os m√©todos de opera√ß√£o para os c√°lculos.
+-Inclua tratamento de erros para entradas inv√°lidas (n√£o num√©ricas) e para divis√£o por zero.
+-N√£o √© necess√°rio a inclus√£o de coment√°rio no c√≥digo.
+
+[FORMATO DE SAIDA ESPERADO]¬†
+Estrutura da Resposta Esperada:¬†
+-Forne√ßa o c√≥digo C# completo em blocos de c√≥digo separados para o Program.cs e a classe Models > Calculadora.cs, pronto para ser copiado para um projeto de console .NET.¬†
+-Forne√ßa os passos para quem desejar executar o projeto em seu computador.
+-Conclua explicando o funcionamento do c√≥digo no Pogram.cs¬† Calculadora.cs de uma forma did√°tica para entendimento de quem est√° inciando os estudos
+```
+
+---
+
+## Retorno do Prompt no Gemini
+
+---
+
 ## Passos para Executar o Projeto
 
 1. **Criar o projeto:**
@@ -11,60 +51,60 @@
    mkdir Models
    ```
 
-3. **Substituir o conte˙do dos arquivos:**
-   - Substitua o conte˙do do arquivo `Program.cs` pelo cÛdigo fornecido
-   - Crie o arquivo `Models/Calculadora.cs` com o cÛdigo da classe
+3. **Substituir o conte√∫do dos arquivos:**
+   - Substitua o conte√∫do do arquivo `Program.cs` pelo c√≥digo fornecido
+   - Crie o arquivo `Models/Calculadora.cs` com o c√≥digo da classe
 
 4. **Executar o projeto:**
    ```bash
    dotnet run
    ```
 
-## ExplicaÁ„o Did·tica do Funcionamento
+## Explica√ß√£o Did√°tica do Funcionamento
 
 ### **Program.cs (Programa Principal)**
 
-O `Program.cs` È o ponto de entrada da aplicaÁ„o e contÈm toda a lÛgica de interaÁ„o com o usu·rio:
+O `Program.cs` √© o ponto de entrada da aplica√ß√£o e cont√©m toda a l√≥gica de intera√ß√£o com o usu√°rio:
 
 **1. Loop Principal:**
-- Um `while (continuar)` mantÈm o programa rodando atÈ o usu·rio escolher sair
-- A cada iteraÁ„o, mostra o menu de opÁıes e aguarda a escolha do usu·rio
+- Um `while (continuar)` mant√©m o programa rodando at√© o usu√°rio escolher sair
+- A cada itera√ß√£o, mostra o menu de op√ß√µes e aguarda a escolha do usu√°rio
 
-**2. ValidaÁ„o de Entrada:**
-- Verifica se a opÁ„o escolhida È v·lida (1-5)
-- Usa `double.TryParse()` para converter strings em n˙meros, validando se s„o n˙meros v·lidos
-- Trata o caso especial da divis„o por zero antes de chamar o mÈtodo
+**2. Valida√ß√£o de Entrada:**
+- Verifica se a op√ß√£o escolhida √© v√°lida (1-5)
+- Usa `double.TryParse()` para converter strings em n√∫meros, validando se s√£o n√∫meros v√°lidos
+- Trata o caso especial da divis√£o por zero antes de chamar o m√©todo
 
 **3. Tratamento de Erros:**
 - `try-catch` captura erros inesperados
-- ValidaÁıes especÌficas para entradas inv·lidas
-- Mensagens claras de erro para o usu·rio
+- Valida√ß√µes espec√≠ficas para entradas inv√°lidas
+- Mensagens claras de erro para o usu√°rio
 
-**4. Interface Amig·vel:**
-- `Console.Clear()` limpa a tela para melhor experiÍncia
-- `Console.ReadKey()` pausa para o usu·rio ver o resultado
-- FormataÁ„o clara dos resultados com sÌmbolos matem·ticos
+**4. Interface Amig√°vel:**
+- `Console.Clear()` limpa a tela para melhor experi√™ncia
+- `Console.ReadKey()` pausa para o usu√°rio ver o resultado
+- Formata√ß√£o clara dos resultados com s√≠mbolos matem√°ticos
 
-### **Models/Calculadora.cs (Classe de C·lculos)**
+### **Models/Calculadora.cs (Classe de C√°lculos)**
 
-A classe `Calculadora` È est·tica e respons·vel apenas pelos c·lculos:
+A classe `Calculadora` √© est√°tica e respons√°vel apenas pelos c√°lculos:
 
-**1. Classe Est·tica:**
-- `static class` significa que n„o precisa ser instanciada
-- Todos os mÈtodos s„o acessados diretamente: `Calculadora.Somar()`
+**1. Classe Est√°tica:**
+- `static class` significa que n√£o precisa ser instanciada
+- Todos os m√©todos s√£o acessados diretamente: `Calculadora.Somar()`
 
 **2. Propriedades Privadas:**
 - `_operando1` e `_operando2` armazenam os valores utilizados
-- S„o `private static` - apenas a prÛpria classe pode acess·-las
+- S√£o `private static` - apenas a pr√≥pria classe pode acess√°-las
 
-**3. MÈtodos de OperaÁ„o:**
-- Cada mÈtodo recebe dois par‚metros `double`
+**3. M√©todos de Opera√ß√£o:**
+- Cada m√©todo recebe dois par√¢metros `double`
 - Armazena os valores nas propriedades privadas
-- Retorna o resultado da operaÁ„o matem·tica correspondente
+- Retorna o resultado da opera√ß√£o matem√°tica correspondente
 
-**4. SeparaÁ„o de Responsabilidades:**
-- A classe se preocupa apenas com os c·lculos
-- N„o possui lÛgica de interface ou validaÁ„o
-- Segue o princÌpio da responsabilidade ˙nica
+**4. Separa√ß√£o de Responsabilidades:**
+- A classe se preocupa apenas com os c√°lculos
+- N√£o possui l√≥gica de interface ou valida√ß√£o
+- Segue o princ√≠pio da responsabilidade √∫nica
 
-Esta estrutura torna o cÛdigo organizado, f·cil de manter e extensÌvel para futuras operaÁıes matem·ticas!
+Esta estrutura torna o c√≥digo organizado, f√°cil de manter e extens√≠vel para futuras opera√ß√µes matem√°ticas!
